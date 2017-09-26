@@ -1,0 +1,10 @@
+/Users/jakeoverall/source/codeworks/summer-2017/web-theater/bin/Debug/netcoreapp2.0/web-theater.deps.json
+/Users/jakeoverall/source/codeworks/summer-2017/web-theater/bin/Debug/netcoreapp2.0/web-theater.runtimeconfig.json
+/Users/jakeoverall/source/codeworks/summer-2017/web-theater/bin/Debug/netcoreapp2.0/web-theater.runtimeconfig.dev.json
+/Users/jakeoverall/source/codeworks/summer-2017/web-theater/bin/Debug/netcoreapp2.0/web-theater.dll
+/Users/jakeoverall/source/codeworks/summer-2017/web-theater/bin/Debug/netcoreapp2.0/web-theater.pdb
+/Users/jakeoverall/source/codeworks/summer-2017/web-theater/obj/Debug/netcoreapp2.0/web-theater.csproj.CoreCompileInputs.cache
+/Users/jakeoverall/source/codeworks/summer-2017/web-theater/obj/Debug/netcoreapp2.0/web-theater.AssemblyInfoInputs.cache
+/Users/jakeoverall/source/codeworks/summer-2017/web-theater/obj/Debug/netcoreapp2.0/web-theater.AssemblyInfo.cs
+/Users/jakeoverall/source/codeworks/summer-2017/web-theater/obj/Debug/netcoreapp2.0/web-theater.dll
+/Users/jakeoverall/source/codeworks/summer-2017/web-theater/obj/Debug/netcoreapp2.0/web-theater.pdb
