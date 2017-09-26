@@ -10,40 +10,43 @@ namespace web_theater.Controllers
     [Route("api/[controller]")]
     public class MoviesController : Controller
     {
+        public TheaterContext _db { get; private set; }
 
-        List<Movie> Values = new List<Movie>() { 
-            new Movie("ET", "An alien and a Boy"),
-            new Movie("IT", "A clown and several boys"),
-            new Movie("Lassie", "A dog and a boy")
-        };
-        public MoviesController()
+        // List<Movie> Values = new List<Movie>() { 
+        //     new Movie("ET", "An alien and a Boy"),
+        //     new Movie("IT", "A clown and several boys"),
+        //     new Movie("Lassie", "A dog and a boy")
+        // };
+        public MoviesController(TheaterContext db)
         {
-            Values.Add(new Movie("Blade", "Some Vampires and a boy"));
+            _db = db;
+            // Values.Add(new Movie("Blade", "Some Vampires and a boy"));
         }
 
         // GET api/values
         [HttpGet]
         public IEnumerable<Movie> Get()
         {
-            return Values;
+            return _db.Movies;
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public Movie Get(int id)
         {
-            var request = id - 1;
-            if (request < Values.Count && request > -1)
-            {
-                return Values[request];
-            }
-            return null;
+            // var request = id - 1;
+            // if (request < Values.Count && request > -1)
+            // {
+            //     return Values[request];
+            // }
+            return _db.Movies.Find(id);
         }
 
         [HttpGet("{banana}")]
-        public Movie Get(string banana)
+        public IEnumerable<Movie> Get(string banana)
         {
-            return Values.Find(x => x.Title.Contains(banana));
+            // return Values.Find(x => x.Title.Contains(banana));
+            return _db.Movies.Where(m => m.Title.Contains(banana)).ToList();
         }
 
 
@@ -56,8 +59,10 @@ namespace web_theater.Controllers
         [HttpPost]
         public IEnumerable<Movie> Post([FromBody]Movie value)
         {
-            Values.Add(value);
-            return Values;
+            // Values.Add(value);
+            _db.Movies.Add(value);
+            _db.SaveChanges();
+            return _db.Movies;
         }
 
         // PUT api/values/5

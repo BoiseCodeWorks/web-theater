@@ -4,23 +4,24 @@ namespace web_theater.Models
 {
     public class Theater
     {
-        public string Name;
-        public List<Movie> Movies = new List<Movie>();
-        public List<Food> Menu = new List<Food>();
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public ICollection<Movie> Movies { get; set; }
+        public ICollection<Food> Menu { get; set; }
 
 
-    public void addMovie(Movie movie)
-    {
-        Movies.Add(movie);
-    } 
-    public void addFood(Food food)
-    {
-        Menu.Add(food);
-    }
+        // public void addMovie(Movie movie)
+        // {
+        //     Movies.Add(movie);
+        // }
+        // public void addFood(Food food)
+        // {
+        //     Menu.Add(food);
+        // }
 
-    public Theater(string name)
-    {
-        Name = name;
-    }
+        // public Theater(string name)
+        // {
+        //     Name = name;
+        // }
     }
 }
